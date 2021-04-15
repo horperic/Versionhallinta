@@ -51,8 +51,8 @@ varten.
 Oletuksena git log listaa kaikki tehdyt muutokset käänteisessä aikajärjestyksessä eli tuorein ensin.
 Tulosteesta näkyi varaston jokainen "commit", sen tarkistussumma, tekijän nimi ja sähköposti, 
 päivämäärä ja viesti. Komennolle voidaan antaa lukuisia erilaisia optioita määrittämään se antamaan
-tarkkaan se tieto mitä halutaan. Kokeilin vielä formatoida komennon tulostetta yksinkertaisemmaksi.
-
+tarkkaan se tieto mitä halutaan tai miten se esitetään. Kokeilin vielä formatoida komennon tulostetta yksinkertaisemmaksi --pretty optiolla.
+Tämä antoi tulosteen, jossa jokainen commit on yhdellä rivillä mikä voi olla hyödyllinen jos tutkitaan suurta joukkoa niitä.
 	
 	$ git log --pretty=oneline
 	9da8e1685537b2345a9efd8f52255686b308226b (HEAD -> main, origin/main, origin/HEAD) Update h3versionhallinta
@@ -66,4 +66,7 @@ tarkkaan se tieto mitä halutaan. Kokeilin vielä formatoida komennon tulostetta
 	3876c1c63b616dd1a277f9a13d343415f7130399 Add README
 	3691083fb096cce15690433f17dc568d4560062e Initial commit
 
-Tämä antoi tulosteen, jossa jokainen commit on yhdellä rivillä mikä voi olla hyödyllinen jos tutkitaan suurta joukkoa niitä.
+Git diff näyttää kahden version väliset erot ja koska git on pohjimmiltaan versionhallintajärjestelmä
+on se hyvin keskeinen komento. Diff komento ottaa kaksi syötettä ja peilaa niiden välisiä eroja. Syötteiden ei tarvitse olla välttämättä tiedostoja vaan ne voivat olla committeja, haaroja tai muutakin. Kahden tiedoston välinen ero on kuitenkin hyvin tyypillinen operaatio niin tein sen itsekkin esimerkin vuoksi.
+
+
