@@ -18,21 +18,21 @@ Git log on yksinkertainen ja tehokas työkalu, minkä avulla nähdään aiemmat 
 varten.
 
 	$ git log
-commit 11a65d103e2ec43c6494f82ab7376de504e2cb30 (HEAD -> main, origin/main, origin/HEAD)
-Author: Iiro Juntunen <bga263@myy.haaga-helia.fi>
-Date:   Thu Apr 15 15:44:21 2021 +0300
+	commit 11a65d103e2ec43c6494f82ab7376de504e2cb30 (HEAD -> main, origin/main, origin/HEAD)
+	Author: Iiro Juntunen <bga263@myy.haaga-helia.fi>
+	Date:   Thu Apr 15 15:44:21 2021 +0300
 
     Add h3versionhallinta
 
-commit d5e0a0415e22f263e9d2069c88e63fde42496664
-Author: Iiro Juntunen <bga263@myy.haaga-helia.fi>
-Date:   Thu Apr 15 15:40:54 2021 +0300
+	commit d5e0a0415e22f263e9d2069c88e63fde42496664
+	Author: Iiro Juntunen <bga263@myy.haaga-helia.fi>
+	Date:   Thu Apr 15 15:40:54 2021 +0300
 
     Add h3versionhallinta
 
-commit 9639f21611e64c970e2649d644981effcf3a7472
-Author: Iiro Juntunen <bga263@myy.haaga-helia.fi>
-Date:   Thu Apr 15 14:39:03 2021 +0300
+	commit 9639f21611e64c970e2649d644981effcf3a7472
+	Author: Iiro Juntunen <bga263@myy.haaga-helia.fi>
+	Date:   Thu Apr 15 14:39:03 2021 +0300
 
     UPDATE h3versionhallinta
 
