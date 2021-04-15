@@ -50,4 +50,20 @@ varten.
 
 Oletuksena git log listaa kaikki tehdyt muutokset käänteisessä aikajärjestyksessä eli tuorein ensin.
 Tulosteesta näkyi varaston jokainen "commit", sen tarkistussumma, tekijän nimi ja sähköposti, 
-päivämäärä ja viesti.
+päivämäärä ja viesti. Komennolle voidaan antaa lukuisia erilaisia optioita määrittämään se antamaan
+tarkkaan se tieto mitä halutaan. Kokeilin vielä formatoida komennon tulostetta yksinkertaisemmaksi.
+
+	
+	$ git log --pretty=oneline
+	9da8e1685537b2345a9efd8f52255686b308226b (HEAD -> main, origin/main, origin/HEAD) Update h3versionhallinta
+	293a74aac0d4d2ed2f0127892d5e180b416ebc34 Update h3versionhallinta
+	2e5d3aef6a717a77dd784aacbb1d4f0ee4979cf6 Update h3versionhallinta
+	36ac58acb9daf1766a86c83ecd19a9c9a47ba37d Update h3versionhallinta
+	11a65d103e2ec43c6494f82ab7376de504e2cb30 Add h3versionhallinta
+	d5e0a0415e22f263e9d2069c88e63fde42496664 Add h3versionhallinta
+	9639f21611e64c970e2649d644981effcf3a7472 UPDATE h3versionhallinta
+	bbf585719f722581f86997a2b71f5beaee9e1e84 ADD h3versionhallinta
+	3876c1c63b616dd1a277f9a13d343415f7130399 Add README
+	3691083fb096cce15690433f17dc568d4560062e Initial commit
+
+Tämä antoi tulosteen, jossa jokainen commit on yhdellä rivillä mikä voi olla hyödyllinen jos tutkitaan suurta joukkoa niitä.
