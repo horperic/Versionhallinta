@@ -36,15 +36,15 @@ varten.
 
     UPDATE h3versionhallinta
 
-commit bbf585719f722581f86997a2b71f5beaee9e1e84
-Author: Iiro Juntunen <bga263@myy.haaga-helia.fi>
-Date:   Thu Apr 15 14:37:16 2021 +0300
+	commit bbf585719f722581f86997a2b71f5beaee9e1e84
+	Author: Iiro Juntunen <bga263@myy.haaga-helia.fi>
+	Date:   Thu Apr 15 14:37:16 2021 +0300
 
     ADD h3versionhallinta
 
-commit 3876c1c63b616dd1a277f9a13d343415f7130399
-Author: Iiro Juntunen <bga263@myy.haaga-helia.fi>
-Date:   Thu Apr 15 14:30:43 2021 +0300
+	commit 3876c1c63b616dd1a277f9a13d343415f7130399
+	Author: Iiro Juntunen <bga263@myy.haaga-helia.fi>
+	Date:   Thu Apr 15 14:30:43 2021 +0300
 
     Add README
 
