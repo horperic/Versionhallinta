@@ -90,3 +90,7 @@ saada selville keneltä asiaa pitää kysyä. Kokeilin itse komentoa perusmuodos
 	77f67c67 (Iiro Juntunen 2021-04-16 11:58:25 +0300 4) Oikein hyvää.
 	
 ## Tyhmä muutos - git reset
+
+Jossain tapauksissa voidaan huomata, että muutokset joita on tehty eivät olleet niin hyviä. Jos on vaikka muutettu tiedostoja, lisätty tai poistettu useita rivejä, mutta halutaan palata takaisin. Muutosten takaisinpalautukseen on olemassa tekniikka "reset to HEAD". Tehtävässä oli tarkoituksena tehdä tyhmä muutos gittiin ilman commit:tia ja tuhota huonot muutokset komennolla 'git reset --hard'. Komennon 'hard' optio on erittäin tehokas, 
+mutta mahdollisesti myös vaarallinen, koska jos tehdään hard reset vastaan tämänhetkistä 'HEAD' versiota se poistaa kaikki muutokset muokattavassa puussa, jotta tämänhetkiset tiedostot vastaavat HEAD:n sisältöä. Tehtävää varten lisäsin pahimman salaisuuteni tuohon jo tuttuun tekstitiedostoon ja sitten tein hard reset operaation. 
+
