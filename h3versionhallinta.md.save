@@ -92,12 +92,11 @@ saada selville keneltä asiaa pitää kysyä. Kokeilin itse komentoa perusmuodos
 ## Tyhmä muutos - git reset
 
 Jossain tapauksissa voidaan huomata, että muutokset joita on tehty eivät olleetkaan niin hyviä. Jos on vaikka muutettu tiedostoja, lisätty tai poistettu vääriä rivejä ja halutaan palata takaisin on muutosten takaisinpalautukseen olemassa 'git reset' tekniikka. 
-Tehtävässä oli tarkoituksena tehdä tyhmä muutos gittiin ilman commit:tia ja tuhota huonot muutokset komennolla 'git reset --hard'. Hard reset on erittäin voimakas mutta myös vaarallinen työkalu, koska se heittää pois kaikki muutokset joita ei ole kommitoitu. 
-Tein ei-halutun muutoksen tekstitiedostooni ja sitten tutkin tilannetta ensin 'git status'. 
+Tehtävässä oli tarkoituksena tehdä tyhmä muutos gittiin ilman commit:tia ja tuhota huonot muutokset komennolla 'git reset --hard'. Hard reset on erittäin voimakas mutta myös vaarallinen työkalu, koska se heittää pois kaikki muutokset joita ei ole kommitoitu. Teinei-halutun muutoksen tekstitiedostooni ja sen jälkeen tein hard resetin. 
 
 	$ git status
-	On branch main
-	Your branch is up to date with 'origin/main'.
+On branch main
+Your branch is up to date with 'origin/main'.
 
 	Changes not staged for commit:
   	(use "git add <file>..." to update what will be committed)
@@ -106,6 +105,4 @@ Tein ei-halutun muutoksen tekstitiedostooni ja sitten tutkin tilannetta ensin 'g
 	modified:   moi.txt
 
 	no changes added to commit (use "git add" and/or "git commit -a")
-
-Sen tulosteesta näkyi tämä tekemäni muutos mitä en ollut vielä kommitoinut. Sitten tein hard resetin, jotta muutos poistuisi.
 
