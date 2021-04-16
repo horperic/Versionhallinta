@@ -80,5 +80,13 @@ ja edellisessä versiossa. Tulosteesta näkyi ensinnäkin syötteeksi annetut ti
 	@@ -0,0 +1 @@
 	+Moi! Mitä kuuluu?
 
-Git blame on myös usein käytetty komento ja se näyttää kuka on muuttanut ja mitä tietyssä tiedostossa, rivi riviltä. Sitä voidaan käyttää usein jos työskennellään ryhmässä ja esimerkiksi jos jokin koodinpätkä ihmetyttää voidaan saada selville keneltä asiaa pitää kysyä. Kokeilin itse komentoa perusmuodossaan edellisessä vaiheessa tekemääni tiedostoon.
+Git blame on myös usein käytetty komento ja se näyttää kuka on muuttanut ja mitä tietyssä tiedostossa, rivi riviltä. Sitä voidaan käyttää usein jos työskennellään ryhmässä ja esimerkiksi jos jokin koodinpätkä ihmetyttää voidaan
+saada selville keneltä asiaa pitää kysyä. Kokeilin itse komentoa perusmuodossaan edellisessä vaiheessa tekemääni tiedostoon mihin olin tehnyt pienen lisäyksen ja tulosteesta siis näkyi ensiksi tiivistefunktio, tekijän nimi ja viimeisen commitin päiväys.
 
+	$ git blame moi.txt
+	d2b8e050 (Iiro Juntunen 2021-04-15 17:19:25 +0300 1) Moi! Mitä kuuluu?
+	77f67c67 (Iiro Juntunen 2021-04-16 11:58:25 +0300 2) 
+	77f67c67 (Iiro Juntunen 2021-04-16 11:58:25 +0300 3) 
+	77f67c67 (Iiro Juntunen 2021-04-16 11:58:25 +0300 4) Oikein hyvää.
+	
+## Tyhmä muutos - git reset
