@@ -120,3 +120,4 @@ Tämä annettu komento poisti pysyvästi muutoksen mitä ei oltu kommitoitu ja k
 
 	nothing to commit, working tree clean
 
+## Uusi salt-moduuli
