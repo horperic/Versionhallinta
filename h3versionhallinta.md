@@ -68,7 +68,9 @@ Tämä antoi tulosteen, jossa jokainen commit on yhdellä rivillä mikä voi oll
 
 Git diff näyttää kahden version väliset erot ja koska git on pohjimmiltaan versionhallintajärjestelmä
 on se hyvin keskeinen komento. Diff komento ottaa kaksi syötettä ja peilaa niiden välisiä eroja. Syötteiden ei tarvitse olla välttämättä tiedostoja vaan ne voivat olla committeja, haaroja tai muutakin. Kahden tiedoston välinen ero on kuitenkin
-hyvin tyypillinen operaatio niin tein sen itsekkin esimerkin vuoksi. Tein muutoksia tyhjään "moi.txt" tiedostoon ja lisäsin sinne jälkeenpäin tekstiä. Sen jälkeen annoin komennon, joka näyttää eron tiedostolle "moi.txt." sen tämänhetkisessä tilassa ja edellisessä versiossa:
+hyvin tyypillinen operaatio niin tein sen itsekin esimerkin vuoksi. Tein muutoksia tyhjään "moi.txt" tiedostoon ja lisäsin sinne jälkeenpäin tekstiä. Sen jälkeen annoin komennon, joka näyttää eron tiedostolle "moi.txt." sen tämänhetkisessä tilassa
+ja edellisessä versiossa. Tulosteesta näkyi ensinnäkin syötteeksi annetut tiedostot, komentoon liittyvä metadata, kaksirivinen diff-ylätunnus (---+++), muutoksen yhteenveto ja rivi yksi oli muutettu toisessa tiedostossa.
+
 
 	$ git diff HEAD^ HEAD moi.txt
 	diff --git a/moi.txt b/moi.txt
@@ -78,4 +80,5 @@ hyvin tyypillinen operaatio niin tein sen itsekkin esimerkin vuoksi. Tein muutok
 	@@ -0,0 +1 @@
 	+Moi! Mitä kuuluu?
 
-Tulosteesta näkyi ensinnäkin syötteeksi annetut tiedostot, komentoon liittyvä metadata, kaksirivinen diff-ylätunnus (---+++), muutoksen yhteenveto ja rivi yksi oli muutettu toisessa tiedostossa.
+Git blame on myös usein käytetty komento ja se näyttää kuka on muuttanut ja mitä tietyssä tiedostossa, rivi riviltä. Sitä voidaan käyttää usein jos työskennellään ryhmässä ja esimerkiksi jos jokin koodinpätkä ihmetyttää voidaan saada selville keneltä asiaa pitää kysyä. Kokeilin itse komentoa perusmuodossaan edellisessä vaiheessa tekemääni tiedostoon.
+
