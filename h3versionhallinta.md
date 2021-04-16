@@ -109,3 +109,7 @@ Tein ei-halutun muutoksen tekstitiedostooni ja sitten tutkin tilannetta ensin 'g
 
 Sen tulosteesta näkyi tämä tekemäni muutos mitä en ollut vielä kommitoinut. Sitten tein hard resetin, jotta muutos poistuisi.
 
+	$ git reset --hard
+	HEAD is now at 9065c46 Update
+
+Tämä annettu komento
