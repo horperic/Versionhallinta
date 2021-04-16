@@ -112,4 +112,11 @@ Sen tulosteesta näkyi tämä tekemäni muutos mitä en ollut vielä kommitoinut
 	$ git reset --hard
 	HEAD is now at 9065c46 Update
 
-Tämä annettu komento
+Tämä annettu komento poisti pysyvästi muutoksen mitä ei oltu kommitoitu ja kun tarkistin uudestaan tilan 'git status' niin sieltä näin, että puun tila oli puhdas.
+
+	$ git status
+	On branch main
+	Your branch is up to date with 'origin/main'.
+
+	nothing to commit, working tree clean
+
