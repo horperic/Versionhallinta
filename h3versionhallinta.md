@@ -121,3 +121,84 @@ Tämä annettu komento poisti pysyvästi muutoksen mitä ei oltu kommitoitu ja k
 	nothing to commit, working tree clean
 
 ## Uusi salt-moduuli
+
+Tehtävänä oli asentaa ja konfiguroida uusi salt-moduuli ja asensin itse komentokehotteesta toimivan ohjelman nimeltään figlet, millä voi tehdä ASCII teksti bannereita normaalista tekstistä. Ensin käsin asennuksen vuoro.
+
+	$ sudo apt-get update
+	$ sudo apt-get install figlet
+
+Sen sijaan, että olisin kirjoittanut tekstiä mitä muutetaan komentoriville tein tekstitiedoston mistä se luetaan.
+
+	$ echo "Hello" >hello.txt
+	$ figlet -p < hello.txt
+	 _   _        _  _         
+	| | | |  ___ | || |  ___   
+	| |_| | / _ \| || | / _ \  
+	|  _  ||  __/| || || (_) | 
+	|_| |_| \___||_||_| \___/  
+
+Sitten salt-moduulin vuoro. Käytin viime tehtävästä tuttuja pkg ja file-moduuleita ja lisäksi tunnilla käsiteltyä cmd-moduulia.
+
+	$ sudoedit /srv/salt/figlet.sls
+
+	figlet:
+  	  pkg.installed
+
+	/srv/salt/hello.txt:
+  	  file.managed:
+   	     - source:  salt://hello.txt
+
+	figlet -p < /srv/salt/hello.txt:
+  	  cmd.run
+
+Moduulin ajaminen.
+
+	$ sudo salt '*' state.apply figlet
+	minion1:
+	----------
+          ID: figlet
+    	Function: pkg.installed
+      	Result: True
+     	Comment: All specified packages are already installed
+     	Started: 16:01:56.951302
+    	Duration: 1133.127 ms
+    	 Changes:   
+	----------
+          ID: /srv/salt/hello.txt
+    	Function: file.managed
+      	Result: True
+     	Comment: File /srv/salt/hello.txt is in the correct state
+    	 Started: 16:01:58.087751
+   	 Duration: 13.496 ms
+    	 Changes:   
+	----------
+          ID: figlet -p < /srv/salt/hello.txt
+    	Function: cmd.run
+      	Result: True
+    	 Comment: Command "figlet -p < /srv/salt/hello.txt" run
+    	 Started: 16:01:58.102215
+   	 Duration: 6.557 ms
+    	 Changes:   
+              ----------
+              pid:
+                  14794
+              retcode:
+                  0
+              stderr:
+              stdout:
+                   _   _      _ _        
+                  | | | | ___| | | ___   
+                  | |_| |/ _ \ | |/ _ \  
+                  |  _  |  __/ | | (_) | 
+                  |_| |_|\___|_|_|\___/
+
+	Summary for minion1
+	------------
+	Succeeded: 3 (changed=1)
+	Failed:    0
+	------------
+	Total states run:     3
+	Total run time:   1.153 s
+
+                           
+
