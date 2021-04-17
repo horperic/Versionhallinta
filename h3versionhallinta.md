@@ -5,16 +5,15 @@
 Tehtävään kuului tehdä sen raportti MarkDownina GitHub-varastoon. Git on versionhallintajärjestelmä, joka tekee tiedostoihin tehtyjen muutosten seuraamisesta helpompaa. 
 Esimerkiksi kun editoidaan tiedostoa, git voi auttaa määrittelemään mikä muuttui, kuka 
 muutti sen ja miksi. Se on hyödyllinen työn koordinoinnissa useamman henkilön projekteis
-sa tai edistymisen seuraamisessa tallennuspisteiden avulla. Git ei ole ainoa saatavilla ole
-va versionhallintajärjestelmä, mutta se on ylivoimaisesti suosituin. 
+sa tai edistymisen seuraamisessa tallennuspisteiden avulla. Git ei ole ainoa saatavilla oleva versionhallintajärjestelmä, mutta se on ylivoimaisesti suosituin. 
 
-GitHub ei ole git vaan se on verkkosivu projektien hostaamista varten, jotka käyttävät git:iä. GitHub käyttää projektien organisointiin varastoja, yleensä yhtä varastoa käytetään yhden projek-
+GitHub taas on verkkosivu projektien hostaamista varten, jotka käyttävät git:iä. GitHub käyttää projektien organisointiin varastoja, yleensä yhtä varastoa käytetään yhden projek-
 tin organisointiin. Varastoihin voi kuulua tiedostoja, kuvia, videoita, laskutaulukkoja 
-tai mitä vaan projekti tarvitseekaan.
+tai mitä vaan projekti tarvitseekaan. Tein GitHub:iin tyhjän varaston 'versionhallinta' tätä tehtävää ja sen tiedostoja varten.
 
 ## git log, git diff ja git blame 
 
-Git log on yksinkertainen ja tehokas työkalu, minkä avulla nähdään aiemmat aiemmat versiot varaston historiassa. Ajoin itse komennon varastossa, minkä olin luonut tätä tehtävää
+Git log on yksinkertainen ja tehokas työkalu, minkä avulla nähdään aiemmat versiot varaston historiassa. Ajoin itse komennon varastossa, minkä olin luonut tätä tehtävää
 varten.
 
 	$ git log
@@ -81,7 +80,7 @@ ja edellisessä versiossa. Tulosteesta näkyi ensinnäkin syötteeksi annetut ti
 	+Moi! Mitä kuuluu?
 
 Git blame on myös usein käytetty komento ja se näyttää kuka on muuttanut ja mitä tietyssä tiedostossa, rivi riviltä. Sitä voidaan käyttää usein jos työskennellään ryhmässä ja esimerkiksi jos jokin koodinpätkä ihmetyttää voidaan
-saada selville keneltä asiaa pitää kysyä. Kokeilin itse komentoa perusmuodossaan edellisessä vaiheessa tekemääni tiedostoon mihin olin tehnyt pienen lisäyksen ja tulosteesta siis näkyi ensiksi tiivistefunktio, tekijän nimi ja viimeisen commitin päiväys.
+saada selville keneltä asiaa pitää kysyä. Kokeilin itse komentoa perusmuodossaan edellisessä vaiheessa tekemääni tiedostoon mihin olin tehnyt pienen lisäyksen ja tulosteesta siis näkyi ensiksi tiivistefunktio, tekijän nimi, päiväys ja riville tehty muutos.
 
 	$ git blame moi.txt
 	d2b8e050 (Iiro Juntunen 2021-04-15 17:19:25 +0300 1) Moi! Mitä kuuluu?
@@ -122,12 +121,12 @@ Tämä annettu komento poisti pysyvästi muutoksen mitä ei oltu kommitoitu ja k
 
 ## Uusi salt-moduuli
 
-Tehtävänä oli asentaa ja konfiguroida uusi salt-moduuli ja asensin itse komentokehotteesta toimivan ohjelman nimeltään figlet, millä voi tehdä ASCII teksti bannereita normaalista tekstistä. Ensin käsin asennuksen vuoro.
+Tehtävänä oli asentaa ja konfiguroida uusi salt-moduuli ja asensin itse yksinkertaisen komentokehotteesta toimivan ohjelman nimeltään figlet, millä voi tehdä ASCII-teksti bannereita normaalista tekstistä. Ensin käsin asennuksen vuoro.
 
 	$ sudo apt-get update
 	$ sudo apt-get install figlet
 
-Sen sijaan, että olisin kirjoittanut tekstiä mitä muutetaan komentoriville tein tekstitiedoston mistä se luetaan.
+Sen sijaan, että olisin kirjoittanut muutettavan tekstin suoraan komentoriville tein tekstitiedoston mistä se luetaan ja sitten ajoin komennon mikä luki tämän tiedostosta.
 
 	$ echo "Hello" >hello.txt
 	$ figlet -p < hello.txt
@@ -137,7 +136,7 @@ Sen sijaan, että olisin kirjoittanut tekstiä mitä muutetaan komentoriville te
 	|  _  ||  __/| || || (_) | 
 	|_| |_| \___||_||_| \___/  
 
-Sitten salt-moduulin vuoro. Käytin viime tehtävästä tuttuja pkg ja file-moduuleita ja lisäksi tunnilla käsiteltyä cmd-moduulia.
+Ja komento tulosti halutun ASCII-tekstin oikein. Sitten oli salt-moduulin vuoro, missä käytin apuna edellisestä viikkotehtävästä tuttuja pkg ja file-moduuleita sekä lisäksi tunnilla käsiteltyä cmd-moduulia.
 
 	$ sudoedit /srv/salt/figlet.sls
 
@@ -151,7 +150,7 @@ Sitten salt-moduulin vuoro. Käytin viime tehtävästä tuttuja pkg ja file-modu
 	figlet -p < /srv/salt/hello.txt:
   	  cmd.run
 
-Moduulin ajaminen.
+Sitten lisäsin tilan minioneille ja tuloste antoi ilmi sen onnistuneen.
 
 	$ sudo salt '*' state.apply figlet
 	minion1:
@@ -200,5 +199,8 @@ Moduulin ajaminen.
 	Total states run:     3
 	Total run time:   1.153 s
 
-                           
+## Lähteet
 
+Tero Karvinen: Publish Your Project with GitHub 
+
+Git: git Documentation
