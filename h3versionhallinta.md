@@ -199,8 +199,8 @@ Sitten lisäsin tilan minioneille ja tuloste antoi ilmi sen onnistuneen.
 
 ## Lähteet
 
-Tero Karvinen: Publish Your Project with GitHub 
+Tero Karvinen: [Publish Your Project with GitHub](http://terokarvinen.com/2016/publish-your-project-with-github/index.html)
 
-Git: git Documentation
+Git: [git Documentation](https://git-scm.com/docs/git) 
 
-[I'm an inline-style link](https://www.google.com)
+
