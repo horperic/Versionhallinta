@@ -11,7 +11,7 @@ tai mitä vaan projekti tarvitseekaan. Tein GitHub:iin tyhjän varaston 'version
 
 ## git log, git diff ja git blame 
 
-Git log on yksinkertainen ja tehokas työkalu, minkä avulla nähdään aiemmat versiot varaston historiassa. Ajoin itse komennon varastossa, minkä olin luonut tätä tehtävää
+Git log on yksinkertainen ja tehokas työkalu, minkä avulla nähdään aiemmat commitit varaston historiassa. Ajoin itse komennon varastossa, minkä olin luonut tätä tehtävää
 varten.
 
 	$ git log
