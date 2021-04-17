@@ -66,7 +66,7 @@ Tämä antoi tulosteen, jossa jokainen commit on yhdellä rivillä mikä voi oll
 Git diff näyttää kahden version väliset erot ja koska git on pohjimmiltaan versionhallintajärjestelmä
 on se hyvin keskeinen komento. Diff komento ottaa kaksi syötettä ja peilaa niiden välisiä eroja. Syötteiden ei tarvitse olla välttämättä tiedostoja vaan ne voivat olla committeja, haaroja tai muutakin. Kahden tiedoston välinen ero on kuitenkin
 hyvin tyypillinen operaatio niin tein sen itsekin esimerkin vuoksi. Tein muutoksia tyhjään "moi.txt" tiedostoon ja lisäsin sinne jälkeenpäin tekstiä. Sen jälkeen annoin komennon, joka näyttää eron tiedostolle "moi.txt." sen tämänhetkisessä tilassa
-ja edellisessä versiossa. Tulosteesta näkyi ensinnäkin syötteeksi annetut tiedostot, komentoon liittyvä metadata, kaksirivinen diff-ylätunnus (---+++), muutoksen yhteenveto ja rivi yksi oli muutettu toisessa tiedostossa.
+ja edellisessä versiossa. Tulosteesta näkyi ensinnäkin syötteeksi annetut tiedostot, komentoon liittyvä metadata, kaksirivinen diff-ylätunnus (---+++), muutoksen yhteenveto (legend) ja muutettu rivi.
 
 
 	$ git diff HEAD^ HEAD moi.txt
