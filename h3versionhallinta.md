@@ -202,3 +202,4 @@ Sitten lisäsin tilan minioneille ja tuloste antoi ilmi sen onnistuneen.
 Tero Karvinen: Publish Your Project with GitHub 
 
 Git: git Documentation
+[https://www.google.com "Google's Homepage"]
