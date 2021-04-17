@@ -119,7 +119,7 @@ Tämä annettu komento poisti pysyvästi muutoksen mitä ei oltu kommitoitu ja k
 
 ## Uusi salt-moduuli
 
-Tehtävänä oli asentaa ja konfiguroida uusi salt-moduuli ja asensin itse yksinkertaisen komentokehotteesta toimivan ohjelman nimeltään figlet, millä voi tehdä ASCII-teksti bannereita normaalista tekstistä. Ensin käsin asennuksen vuoro.
+Tehtävänä oli asentaa ja konfiguroida uusi salt-moduuli ja asensin itse yksinkertaisen komentokehotteesta toimivan ohjelman nimeltään figlet, millä voi tehdä ASCII-tekstibannereita normaalista tekstistä. Ensin käsin asennuksen vuoro.
 
 	$ sudo apt-get update
 	$ sudo apt-get install figlet
